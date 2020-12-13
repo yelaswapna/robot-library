@@ -988,6 +988,11 @@ class TestProjectLibrary:
 
     # BROWSER MANAGEMENT END #
 
+    # GENERIC #
+    def create_step(self, description, message, passed=True, screenshot=True):
+        self.__reporter.step(description=description, message=message, passed=passed, screenshot=screenshot)
+    # GENERIC END#
+
     # UTIL METHODS #
     def base(self, *args):
         func_name = inspect.stack()[1].function
